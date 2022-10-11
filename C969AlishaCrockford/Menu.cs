@@ -20,7 +20,9 @@ namespace C969AlishaCrockford
         private void buttonMenuLogout_Click(object sender, EventArgs e)
         {
             MessageBox.Show("You have been logged out.");
-            this.Close();
+            this.Hide();
+            LoginScreen login = new LoginScreen();
+            login.ShowDialog();
         }
 
         private void buttonMenuCustomers_Click(object sender, EventArgs e)

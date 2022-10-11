@@ -34,7 +34,7 @@ namespace C969AlishaCrockford
             this.textBoxLoginUsername = new System.Windows.Forms.TextBox();
             this.textBoxLoginPassword = new System.Windows.Forms.TextBox();
             this.labelLoginUsername = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelLoginPassword = new System.Windows.Forms.Label();
             this.buttonLoginSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -63,20 +63,23 @@ namespace C969AlishaCrockford
             // 
             // textBoxLoginUsername
             // 
-            this.textBoxLoginUsername.Location = new System.Drawing.Point(274, 215);
-            this.textBoxLoginUsername.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxLoginUsername.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLoginUsername.Location = new System.Drawing.Point(274, 214);
+            this.textBoxLoginUsername.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxLoginUsername.Multiline = true;
             this.textBoxLoginUsername.Name = "textBoxLoginUsername";
-            this.textBoxLoginUsername.Size = new System.Drawing.Size(250, 40);
+            this.textBoxLoginUsername.Size = new System.Drawing.Size(250, 33);
             this.textBoxLoginUsername.TabIndex = 2;
             // 
             // textBoxLoginPassword
             // 
-            this.textBoxLoginPassword.Location = new System.Drawing.Point(274, 338);
-            this.textBoxLoginPassword.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBoxLoginPassword.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLoginPassword.Location = new System.Drawing.Point(274, 337);
+            this.textBoxLoginPassword.Margin = new System.Windows.Forms.Padding(1);
             this.textBoxLoginPassword.Multiline = true;
             this.textBoxLoginPassword.Name = "textBoxLoginPassword";
-            this.textBoxLoginPassword.Size = new System.Drawing.Size(250, 40);
+            this.textBoxLoginPassword.PasswordChar = '*';
+            this.textBoxLoginPassword.Size = new System.Drawing.Size(250, 34);
             this.textBoxLoginPassword.TabIndex = 3;
             // 
             // labelLoginUsername
@@ -90,16 +93,16 @@ namespace C969AlishaCrockford
             this.labelLoginUsername.TabIndex = 4;
             this.labelLoginUsername.Text = "Username:";
             // 
-            // label1
+            // labelLoginPassword
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 338);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 23);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Password:";
+            this.labelLoginPassword.AutoSize = true;
+            this.labelLoginPassword.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoginPassword.Location = new System.Drawing.Point(163, 338);
+            this.labelLoginPassword.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.labelLoginPassword.Name = "labelLoginPassword";
+            this.labelLoginPassword.Size = new System.Drawing.Size(94, 23);
+            this.labelLoginPassword.TabIndex = 5;
+            this.labelLoginPassword.Text = "Password:";
             // 
             // buttonLoginSubmit
             // 
@@ -107,7 +110,7 @@ namespace C969AlishaCrockford
             this.buttonLoginSubmit.Font = new System.Drawing.Font("Microsoft Tai Le", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLoginSubmit.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonLoginSubmit.Location = new System.Drawing.Point(424, 442);
-            this.buttonLoginSubmit.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.buttonLoginSubmit.Margin = new System.Windows.Forms.Padding(1);
             this.buttonLoginSubmit.Name = "buttonLoginSubmit";
             this.buttonLoginSubmit.Size = new System.Drawing.Size(100, 50);
             this.buttonLoginSubmit.TabIndex = 6;
@@ -122,7 +125,7 @@ namespace C969AlishaCrockford
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 661);
             this.Controls.Add(this.buttonLoginSubmit);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelLoginPassword);
             this.Controls.Add(this.labelLoginUsername);
             this.Controls.Add(this.textBoxLoginPassword);
             this.Controls.Add(this.textBoxLoginUsername);
@@ -130,7 +133,7 @@ namespace C969AlishaCrockford
             this.Controls.Add(this.labelLoginScreenWelcome);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "LoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -146,7 +149,7 @@ namespace C969AlishaCrockford
         private System.Windows.Forms.TextBox textBoxLoginUsername;
         private System.Windows.Forms.TextBox textBoxLoginPassword;
         private System.Windows.Forms.Label labelLoginUsername;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelLoginPassword;
         private System.Windows.Forms.Button buttonLoginSubmit;
     }
 }

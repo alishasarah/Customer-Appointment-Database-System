@@ -16,7 +16,10 @@ namespace C969AlishaCrockford
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //DBConn.startConnection();
             Application.Run(new LoginScreen());
+            //DBConn.closeConnection();
         }
     }
 }
