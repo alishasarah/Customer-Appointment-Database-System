@@ -48,6 +48,9 @@ namespace C969AlishaCrockford
             this.labelModifyCustPhone = new System.Windows.Forms.Label();
             this.labelModifyCustName = new System.Windows.Forms.Label();
             this.buttonApptSave = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.searchCustomerBtn = new System.Windows.Forms.Button();
+            this.cityTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,14 +141,14 @@ namespace C969AlishaCrockford
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(77, 106);
+            this.dataGridView1.Location = new System.Drawing.Point(76, 120);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(549, 208);
             this.dataGridView1.TabIndex = 11;
             // 
             // textModifyCustCountry
             // 
-            this.textModifyCustCountry.Location = new System.Drawing.Point(266, 468);
+            this.textModifyCustCountry.Location = new System.Drawing.Point(265, 482);
             this.textModifyCustCountry.Multiline = true;
             this.textModifyCustCountry.Name = "textModifyCustCountry";
             this.textModifyCustCountry.ReadOnly = true;
@@ -154,7 +157,7 @@ namespace C969AlishaCrockford
             // 
             // textModifyCustCity
             // 
-            this.textModifyCustCity.Location = new System.Drawing.Point(266, 435);
+            this.textModifyCustCity.Location = new System.Drawing.Point(265, 449);
             this.textModifyCustCity.Multiline = true;
             this.textModifyCustCity.Name = "textModifyCustCity";
             this.textModifyCustCity.ReadOnly = true;
@@ -163,7 +166,7 @@ namespace C969AlishaCrockford
             // 
             // textModifyCustAddress
             // 
-            this.textModifyCustAddress.Location = new System.Drawing.Point(266, 365);
+            this.textModifyCustAddress.Location = new System.Drawing.Point(265, 379);
             this.textModifyCustAddress.Multiline = true;
             this.textModifyCustAddress.Name = "textModifyCustAddress";
             this.textModifyCustAddress.ReadOnly = true;
@@ -172,7 +175,7 @@ namespace C969AlishaCrockford
             // 
             // textModifyCustPhone
             // 
-            this.textModifyCustPhone.Location = new System.Drawing.Point(266, 399);
+            this.textModifyCustPhone.Location = new System.Drawing.Point(265, 413);
             this.textModifyCustPhone.Multiline = true;
             this.textModifyCustPhone.Name = "textModifyCustPhone";
             this.textModifyCustPhone.ReadOnly = true;
@@ -181,7 +184,7 @@ namespace C969AlishaCrockford
             // 
             // textModifyCustName
             // 
-            this.textModifyCustName.Location = new System.Drawing.Point(266, 332);
+            this.textModifyCustName.Location = new System.Drawing.Point(265, 346);
             this.textModifyCustName.Multiline = true;
             this.textModifyCustName.Name = "textModifyCustName";
             this.textModifyCustName.ReadOnly = true;
@@ -192,7 +195,7 @@ namespace C969AlishaCrockford
             // 
             this.labelModifyCustCountry.AutoSize = true;
             this.labelModifyCustCountry.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelModifyCustCountry.Location = new System.Drawing.Point(104, 467);
+            this.labelModifyCustCountry.Location = new System.Drawing.Point(103, 481);
             this.labelModifyCustCountry.Name = "labelModifyCustCountry";
             this.labelModifyCustCountry.Size = new System.Drawing.Size(81, 23);
             this.labelModifyCustCountry.TabIndex = 43;
@@ -202,7 +205,7 @@ namespace C969AlishaCrockford
             // 
             this.labelModifyCustCity.AutoSize = true;
             this.labelModifyCustCity.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelModifyCustCity.Location = new System.Drawing.Point(104, 432);
+            this.labelModifyCustCity.Location = new System.Drawing.Point(103, 446);
             this.labelModifyCustCity.Name = "labelModifyCustCity";
             this.labelModifyCustCity.Size = new System.Drawing.Size(46, 23);
             this.labelModifyCustCity.TabIndex = 42;
@@ -212,7 +215,7 @@ namespace C969AlishaCrockford
             // 
             this.labelModifyCustAddress.AutoSize = true;
             this.labelModifyCustAddress.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelModifyCustAddress.Location = new System.Drawing.Point(104, 365);
+            this.labelModifyCustAddress.Location = new System.Drawing.Point(103, 379);
             this.labelModifyCustAddress.Name = "labelModifyCustAddress";
             this.labelModifyCustAddress.Size = new System.Drawing.Size(81, 23);
             this.labelModifyCustAddress.TabIndex = 41;
@@ -222,7 +225,7 @@ namespace C969AlishaCrockford
             // 
             this.labelModifyCustPhone.AutoSize = true;
             this.labelModifyCustPhone.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelModifyCustPhone.Location = new System.Drawing.Point(104, 399);
+            this.labelModifyCustPhone.Location = new System.Drawing.Point(103, 413);
             this.labelModifyCustPhone.Name = "labelModifyCustPhone";
             this.labelModifyCustPhone.Size = new System.Drawing.Size(142, 23);
             this.labelModifyCustPhone.TabIndex = 40;
@@ -232,7 +235,7 @@ namespace C969AlishaCrockford
             // 
             this.labelModifyCustName.AutoSize = true;
             this.labelModifyCustName.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelModifyCustName.Location = new System.Drawing.Point(104, 332);
+            this.labelModifyCustName.Location = new System.Drawing.Point(103, 346);
             this.labelModifyCustName.Name = "labelModifyCustName";
             this.labelModifyCustName.Size = new System.Drawing.Size(64, 23);
             this.labelModifyCustName.TabIndex = 39;
@@ -241,7 +244,7 @@ namespace C969AlishaCrockford
             // buttonApptSave
             // 
             this.buttonApptSave.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonApptSave.Location = new System.Drawing.Point(537, 501);
+            this.buttonApptSave.Location = new System.Drawing.Point(536, 515);
             this.buttonApptSave.Name = "buttonApptSave";
             this.buttonApptSave.Size = new System.Drawing.Size(76, 37);
             this.buttonApptSave.TabIndex = 64;
@@ -249,12 +252,45 @@ namespace C969AlishaCrockford
             this.buttonApptSave.UseVisualStyleBackColor = true;
             this.buttonApptSave.Click += new System.EventHandler(this.buttonApptSave_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(128, 88);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 23);
+            this.label1.TabIndex = 71;
+            this.label1.Text = "Search by city:";
+            // 
+            // searchCustomerBtn
+            // 
+            this.searchCustomerBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchCustomerBtn.Location = new System.Drawing.Point(509, 86);
+            this.searchCustomerBtn.Name = "searchCustomerBtn";
+            this.searchCustomerBtn.Size = new System.Drawing.Size(76, 28);
+            this.searchCustomerBtn.TabIndex = 70;
+            this.searchCustomerBtn.Text = "Search";
+            this.searchCustomerBtn.UseVisualStyleBackColor = true;
+            this.searchCustomerBtn.Click += new System.EventHandler(this.searchCustomerBtn_Click);
+            // 
+            // cityTextBox
+            // 
+            this.cityTextBox.Location = new System.Drawing.Point(275, 87);
+            this.cityTextBox.Multiline = true;
+            this.cityTextBox.Name = "cityTextBox";
+            this.cityTextBox.Size = new System.Drawing.Size(217, 27);
+            this.cityTextBox.TabIndex = 69;
+            this.cityTextBox.TextChanged += new System.EventHandler(this.cityTextBox_TextChanged);
+            // 
             // CustomerDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 661);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.searchCustomerBtn);
+            this.Controls.Add(this.cityTextBox);
             this.Controls.Add(this.buttonApptSave);
             this.Controls.Add(this.textModifyCustCountry);
             this.Controls.Add(this.textModifyCustCity);
@@ -306,5 +342,8 @@ namespace C969AlishaCrockford
         private System.Windows.Forms.Label labelModifyCustPhone;
         private System.Windows.Forms.Label labelModifyCustName;
         private System.Windows.Forms.Button buttonApptSave;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button searchCustomerBtn;
+        private System.Windows.Forms.TextBox cityTextBox;
     }
 }

@@ -176,6 +176,7 @@ namespace C969AlishaCrockford
             this.textBoxResult.ReadOnly = true;
             this.textBoxResult.Size = new System.Drawing.Size(549, 33);
             this.textBoxResult.TabIndex = 28;
+            this.textBoxResult.TextChanged += new System.EventHandler(this.textBoxResult_TextChanged);
             // 
             // btnDecember
             // 

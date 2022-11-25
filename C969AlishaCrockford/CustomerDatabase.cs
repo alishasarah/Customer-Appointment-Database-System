@@ -193,5 +193,52 @@ namespace C969AlishaCrockford
             CustomerDatabase customerDatabase = new CustomerDatabase();
             customerDatabase.ShowDialog();
         }
+
+        private void searchCustomerBtn_Click(object sender, EventArgs e)
+        {
+            var conn = new MySqlConnection();
+            conn.ConnectionString = connString;
+            conn.Open();
+            using (DataTable dataTable = new DataTable())
+            {
+                using (MySqlCommand cmd = new MySqlCommand("SELECT customerId, customerName, customer.addressId, address, address2, address.cityId, city, postalCode, country, city.countryId, phone FROM customer" +
+                    " INNER JOIN address AS address ON customer.addressId = address.addressId" +
+                    " INNER JOIN city AS city ON address.cityId = city.cityId" +
+                    " INNER JOIN country AS country ON city.countryId = country.countryId" +
+                    " WHERE city = @city", conn))
+                {
+                    cmd.Parameters.AddWithValue("@city", cityTextBox.Text);
+                    MySqlDataAdapter weekCMD = new MySqlDataAdapter(cmd);
+                    weekCMD.Fill(dataTable);
+                    dataGridView1.DataSource = dataTable;
+                }
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("There are no cities that match the entry.");
+                    return;
+                }
+            }
+        }
+
+        private void cityTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (cityTextBox.Text == "")
+            {
+                string Query = ("SELECT customerId, customerName, customer.addressId, address, address2, address.cityId, city, postalCode, country, city.countryId, phone FROM customer" +
+                    " INNER JOIN address AS address ON customer.addressId = address.addressId" +
+                    " INNER JOIN city AS city ON address.cityId = city.cityId" +
+                    " INNER JOIN country AS country ON city.countryId = country.countryId");
+                MySqlConnection conn = new MySqlConnection(connString);
+                MySqlCommand cmd = new MySqlCommand(Query, conn);
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbTable = new DataTable();
+                sda.Fill(dbTable);
+                BindingSource dbSource = new BindingSource();
+                dbSource.DataSource = dbTable;
+                dataGridView1.DataSource = dbSource;
+                sda.Update(dbTable);
+            }
+        }
     }
 }

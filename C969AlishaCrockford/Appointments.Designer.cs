@@ -52,6 +52,9 @@ namespace C969AlishaCrockford
             this.buttonApptSave = new System.Windows.Forms.Button();
             this.textAddApptUser = new System.Windows.Forms.TextBox();
             this.labelAddApptUser = new System.Windows.Forms.Label();
+            this.customerIDTextBox = new System.Windows.Forms.TextBox();
+            this.searchApptBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppt)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,7 +132,7 @@ namespace C969AlishaCrockford
             // buttonAppointmentModify
             // 
             this.buttonAppointmentModify.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAppointmentModify.Location = new System.Drawing.Point(298, 553);
+            this.buttonAppointmentModify.Location = new System.Drawing.Point(297, 599);
             this.buttonAppointmentModify.Name = "buttonAppointmentModify";
             this.buttonAppointmentModify.Size = new System.Drawing.Size(100, 50);
             this.buttonAppointmentModify.TabIndex = 16;
@@ -140,7 +143,7 @@ namespace C969AlishaCrockford
             // buttonAppointmentDelete
             // 
             this.buttonAppointmentDelete.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAppointmentDelete.Location = new System.Drawing.Point(452, 553);
+            this.buttonAppointmentDelete.Location = new System.Drawing.Point(451, 599);
             this.buttonAppointmentDelete.Name = "buttonAppointmentDelete";
             this.buttonAppointmentDelete.Size = new System.Drawing.Size(100, 50);
             this.buttonAppointmentDelete.TabIndex = 15;
@@ -151,7 +154,7 @@ namespace C969AlishaCrockford
             // buttonAppointmentAdd
             // 
             this.buttonAppointmentAdd.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAppointmentAdd.Location = new System.Drawing.Point(138, 553);
+            this.buttonAppointmentAdd.Location = new System.Drawing.Point(137, 599);
             this.buttonAppointmentAdd.Name = "buttonAppointmentAdd";
             this.buttonAppointmentAdd.Size = new System.Drawing.Size(100, 50);
             this.buttonAppointmentAdd.TabIndex = 14;
@@ -173,7 +176,7 @@ namespace C969AlishaCrockford
             // dataGridViewAppt
             // 
             this.dataGridViewAppt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAppt.Location = new System.Drawing.Point(71, 140);
+            this.dataGridViewAppt.Location = new System.Drawing.Point(70, 186);
             this.dataGridViewAppt.Name = "dataGridViewAppt";
             this.dataGridViewAppt.Size = new System.Drawing.Size(549, 174);
             this.dataGridViewAppt.TabIndex = 19;
@@ -184,7 +187,7 @@ namespace C969AlishaCrockford
             this.dateTimeEnd.CustomFormat = "yyyy/MM/dd HH:mm:ss";
             this.dateTimeEnd.Enabled = false;
             this.dateTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeEnd.Location = new System.Drawing.Point(289, 470);
+            this.dateTimeEnd.Location = new System.Drawing.Point(288, 516);
             this.dateTimeEnd.Name = "dateTimeEnd";
             this.dateTimeEnd.Size = new System.Drawing.Size(200, 20);
             this.dateTimeEnd.TabIndex = 62;
@@ -195,7 +198,7 @@ namespace C969AlishaCrockford
             this.dateTimeStart.CustomFormat = "yyyy/MM/dd HH:mm:ss";
             this.dateTimeStart.Enabled = false;
             this.dateTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeStart.Location = new System.Drawing.Point(289, 435);
+            this.dateTimeStart.Location = new System.Drawing.Point(288, 481);
             this.dateTimeStart.Name = "dateTimeStart";
             this.dateTimeStart.Size = new System.Drawing.Size(200, 20);
             this.dateTimeStart.TabIndex = 61;
@@ -206,7 +209,7 @@ namespace C969AlishaCrockford
             this.btnInPerson.AutoSize = true;
             this.btnInPerson.Enabled = false;
             this.btnInPerson.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInPerson.Location = new System.Drawing.Point(403, 397);
+            this.btnInPerson.Location = new System.Drawing.Point(402, 443);
             this.btnInPerson.Name = "btnInPerson";
             this.btnInPerson.Size = new System.Drawing.Size(110, 27);
             this.btnInPerson.TabIndex = 60;
@@ -220,7 +223,7 @@ namespace C969AlishaCrockford
             this.btnVirtual.AutoSize = true;
             this.btnVirtual.Enabled = false;
             this.btnVirtual.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVirtual.Location = new System.Drawing.Point(289, 397);
+            this.btnVirtual.Location = new System.Drawing.Point(288, 443);
             this.btnVirtual.Name = "btnVirtual";
             this.btnVirtual.Size = new System.Drawing.Size(84, 27);
             this.btnVirtual.TabIndex = 59;
@@ -232,7 +235,7 @@ namespace C969AlishaCrockford
             // textAddApptCustomer
             // 
             this.textAddApptCustomer.Enabled = false;
-            this.textAddApptCustomer.Location = new System.Drawing.Point(289, 331);
+            this.textAddApptCustomer.Location = new System.Drawing.Point(288, 377);
             this.textAddApptCustomer.Multiline = true;
             this.textAddApptCustomer.Name = "textAddApptCustomer";
             this.textAddApptCustomer.ReadOnly = true;
@@ -243,7 +246,7 @@ namespace C969AlishaCrockford
             // 
             this.labelAddApptEnd.AutoSize = true;
             this.labelAddApptEnd.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddApptEnd.Location = new System.Drawing.Point(134, 467);
+            this.labelAddApptEnd.Location = new System.Drawing.Point(133, 513);
             this.labelAddApptEnd.Name = "labelAddApptEnd";
             this.labelAddApptEnd.Size = new System.Drawing.Size(46, 23);
             this.labelAddApptEnd.TabIndex = 57;
@@ -253,7 +256,7 @@ namespace C969AlishaCrockford
             // 
             this.labelAddApptStart.AutoSize = true;
             this.labelAddApptStart.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddApptStart.Location = new System.Drawing.Point(134, 432);
+            this.labelAddApptStart.Location = new System.Drawing.Point(133, 478);
             this.labelAddApptStart.Name = "labelAddApptStart";
             this.labelAddApptStart.Size = new System.Drawing.Size(53, 23);
             this.labelAddApptStart.TabIndex = 56;
@@ -263,7 +266,7 @@ namespace C969AlishaCrockford
             // 
             this.labelAddApptType.AutoSize = true;
             this.labelAddApptType.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddApptType.Location = new System.Drawing.Point(134, 397);
+            this.labelAddApptType.Location = new System.Drawing.Point(133, 443);
             this.labelAddApptType.Name = "labelAddApptType";
             this.labelAddApptType.Size = new System.Drawing.Size(54, 23);
             this.labelAddApptType.TabIndex = 55;
@@ -273,7 +276,7 @@ namespace C969AlishaCrockford
             // 
             this.labelAddApptCustomer.AutoSize = true;
             this.labelAddApptCustomer.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddApptCustomer.Location = new System.Drawing.Point(134, 335);
+            this.labelAddApptCustomer.Location = new System.Drawing.Point(133, 381);
             this.labelAddApptCustomer.Name = "labelAddApptCustomer";
             this.labelAddApptCustomer.Size = new System.Drawing.Size(118, 23);
             this.labelAddApptCustomer.TabIndex = 54;
@@ -282,7 +285,7 @@ namespace C969AlishaCrockford
             // buttonApptSave
             // 
             this.buttonApptSave.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonApptSave.Location = new System.Drawing.Point(461, 496);
+            this.buttonApptSave.Location = new System.Drawing.Point(460, 542);
             this.buttonApptSave.Name = "buttonApptSave";
             this.buttonApptSave.Size = new System.Drawing.Size(76, 37);
             this.buttonApptSave.TabIndex = 63;
@@ -293,7 +296,7 @@ namespace C969AlishaCrockford
             // textAddApptUser
             // 
             this.textAddApptUser.Enabled = false;
-            this.textAddApptUser.Location = new System.Drawing.Point(289, 364);
+            this.textAddApptUser.Location = new System.Drawing.Point(288, 410);
             this.textAddApptUser.Multiline = true;
             this.textAddApptUser.Name = "textAddApptUser";
             this.textAddApptUser.ReadOnly = true;
@@ -304,11 +307,41 @@ namespace C969AlishaCrockford
             // 
             this.labelAddApptUser.AutoSize = true;
             this.labelAddApptUser.Font = new System.Drawing.Font("Microsoft Tai Le", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddApptUser.Location = new System.Drawing.Point(134, 368);
+            this.labelAddApptUser.Location = new System.Drawing.Point(133, 414);
             this.labelAddApptUser.Name = "labelAddApptUser";
             this.labelAddApptUser.Size = new System.Drawing.Size(75, 23);
             this.labelAddApptUser.TabIndex = 64;
             this.labelAddApptUser.Text = "User ID:";
+            // 
+            // customerIDTextBox
+            // 
+            this.customerIDTextBox.Location = new System.Drawing.Point(271, 149);
+            this.customerIDTextBox.Multiline = true;
+            this.customerIDTextBox.Name = "customerIDTextBox";
+            this.customerIDTextBox.Size = new System.Drawing.Size(217, 27);
+            this.customerIDTextBox.TabIndex = 66;
+            this.customerIDTextBox.TextChanged += new System.EventHandler(this.customerIDTextBox_TextChanged);
+            // 
+            // searchApptBtn
+            // 
+            this.searchApptBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchApptBtn.Location = new System.Drawing.Point(505, 148);
+            this.searchApptBtn.Name = "searchApptBtn";
+            this.searchApptBtn.Size = new System.Drawing.Size(76, 28);
+            this.searchApptBtn.TabIndex = 67;
+            this.searchApptBtn.Text = "Search";
+            this.searchApptBtn.UseVisualStyleBackColor = true;
+            this.searchApptBtn.Click += new System.EventHandler(this.searchApptBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(96, 152);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(169, 21);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Search by customer ID:";
             // 
             // Appointments
             // 
@@ -316,6 +349,9 @@ namespace C969AlishaCrockford
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(684, 661);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.searchApptBtn);
+            this.Controls.Add(this.customerIDTextBox);
             this.Controls.Add(this.textAddApptUser);
             this.Controls.Add(this.labelAddApptUser);
             this.Controls.Add(this.buttonApptSave);
@@ -374,5 +410,8 @@ namespace C969AlishaCrockford
         private System.Windows.Forms.Button buttonApptSave;
         private System.Windows.Forms.TextBox textAddApptUser;
         private System.Windows.Forms.Label labelAddApptUser;
+        private System.Windows.Forms.TextBox customerIDTextBox;
+        private System.Windows.Forms.Button searchApptBtn;
+        private System.Windows.Forms.Label label1;
     }
 }

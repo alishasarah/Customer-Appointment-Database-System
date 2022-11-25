@@ -335,5 +335,10 @@ namespace C969AlishaCrockford
                 }
             }
         }
+
+        private void textBoxResult_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

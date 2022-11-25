@@ -351,5 +351,49 @@ namespace C969AlishaCrockford
             sda.Update(dbTable);
         }
 
+        private void searchApptBtn_Click(object sender, EventArgs e)
+        {
+            var conn = new MySqlConnection();
+            conn.ConnectionString = connString;
+            conn.Open();
+            using (DataTable dataTable = new DataTable())
+            {
+                using (MySqlCommand cmd = new MySqlCommand("SELECT appointmentId, appointment.customerId, appointment.userId, type, start, end FROM appointment" +
+                " INNER JOIN customer AS customer ON appointment.customerId = customer.customerId" +
+                " INNER JOIN user AS user ON appointment.userId = user.userId" +
+                    " WHERE customer.customerId = @customerID", conn))
+                {
+                    cmd.Parameters.AddWithValue("@customerID", customerIDTextBox.Text);
+                    MySqlDataAdapter weekCMD = new MySqlDataAdapter(cmd);
+                    weekCMD.Fill(dataTable);
+                    dataGridViewAppt.DataSource = dataTable;
+                }
+            }
+            if (dataGridViewAppt.Rows.Count == 0)
+            {
+                MessageBox.Show("There are no customer IDs that match the entry.");
+                return;
+            }
+        }
+
+        private void customerIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (customerIDTextBox.Text == "")
+            {
+                string Query = ("SELECT appointmentId, appointment.customerId, appointment.userId, type, start, end FROM appointment" +
+                " INNER JOIN customer AS customer ON appointment.customerId = customer.customerId" +
+                " INNER JOIN user AS user ON appointment.userId = user.userId");
+                MySqlConnection conn = new MySqlConnection(connString);
+                MySqlCommand cmd = new MySqlCommand(Query, conn);
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmd;
+                DataTable dbTable = new DataTable();
+                sda.Fill(dbTable);
+                BindingSource dbSource = new BindingSource();
+                dbSource.DataSource = dbTable;
+                dataGridViewAppt.DataSource = dbSource;
+                sda.Update(dbTable);
+            }
+        }
     }
 }
